@@ -5,11 +5,12 @@ import { Cat } from './interfaces/cat.interface';
 export class CatsService {
   private readonly cats: Cat[] = [];
 
-  create(cat: Cat) {
+  create(cat: Cat) {    
     this.cats.push(cat);
   }
 
   findAll(): Promise<Cat[]> {
+    console.log('Cat call');
     return Promise.resolve(this.cats);
   }
 }
